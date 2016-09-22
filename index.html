@@ -303,7 +303,7 @@ obj.<span class="function">func</span> = <span class="keyword">function</span>()
 };
 
 <span class="comment">// change type of property</span>
-obj.age: <span class="string"><span class="delimiter">&quot;</span><span class="content">too old</span><span class="delimiter">&quot;</span></span>;
+obj.age = <span class="string"><span class="delimiter">&quot;</span><span class="content">too old</span><span class="delimiter">&quot;</span></span>;
 console.log(obj.age);
 <span class="comment">// -&gt; &quot;too old&quot;</span>
 
@@ -1906,8 +1906,8 @@ More information on the inoffical standard: <a href="http://json-schema.org/" cl
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<a href="http://www.ecma-international.org/ecma-262/6.0" class="bare">http://www.ecma-international.org/ecma-262/6.0</a><br>
-<a href="http://www.ecma-international.org/ecma-262/7.0" class="bare">http://www.ecma-international.org/ecma-262/7.0</a>
+<a href="http://www.ecma-international.org/ecma-262/6.0" class="bare">http://www.ecma-international.org/ecma-262/6.0</a> &#8658; ES2015<br>
+<a href="http://www.ecma-international.org/ecma-262/7.0" class="bare">http://www.ecma-international.org/ecma-262/7.0</a> &#8658; ES2106
 </td>
 </tr>
 </table>
@@ -1954,7 +1954,7 @@ Person.prototype.<span class="function">getName</span> = <span class="keyword">f
 <div class="listingblock">
 <div class="title">inheritance.js</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="javascript"><span class="reserved">class</span> Male(name) <span class="reserved">extends</span> Person {
+<pre class="CodeRay highlight"><code data-lang="javascript"><span class="reserved">class</span> Male <span class="reserved">extends</span> Person {
   constructor(name) {
     <span class="reserved">super</span>(name);
   }
@@ -2282,11 +2282,11 @@ const person = getPerson(<span class="string"><span class="delimiter">'</span><s
 <div class="listingblock">
 <div class="title">rest-parameter.js</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="javascript"><span class="keyword">function</span> <span class="function">join</span>(separater, ...values) {
+<pre class="CodeRay highlight"><code data-lang="javascript"><span class="keyword">function</span> <span class="function">joinMe</span>(separator, ...values) {
   <span class="keyword">return</span> values.join(separator);
 }
 
-join(<span class="string"><span class="delimiter">'</span><span class="content">-</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">one</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">two</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">three</span><span class="delimiter">'</span></span>);
+joinMe(<span class="string"><span class="delimiter">'</span><span class="content">-</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">one</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">two</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">three</span><span class="delimiter">'</span></span>);
 <span class="comment">// one-two-three</span></code></pre>
 </div>
 </div>
@@ -2616,7 +2616,7 @@ set.size
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="javascript">let set = <span class="keyword">new</span> Set([<span class="string"><span class="delimiter">'</span><span class="content">red</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">green</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">blue</span><span class="delimiter">'</span></span>]);
 <span class="comment">// or</span>
-let set = <span class="keyword">new</span> set().add(<span class="string"><span class="delimiter">'</span><span class="content">red</span><span class="delimiter">'</span></span>).add(<span class="string"><span class="delimiter">'</span><span class="content">green</span><span class="delimiter">'</span></span>).add(<span class="string"><span class="delimiter">'</span><span class="content">blue</span><span class="delimiter">'</span></span>);</code></pre>
+let set = <span class="keyword">new</span> Set().add(<span class="string"><span class="delimiter">'</span><span class="content">red</span><span class="delimiter">'</span></span>).add(<span class="string"><span class="delimiter">'</span><span class="content">green</span><span class="delimiter">'</span></span>).add(<span class="string"><span class="delimiter">'</span><span class="content">blue</span><span class="delimiter">'</span></span>);</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -3615,7 +3615,7 @@ Only modern browsers, still marked as <em>experimental</em>.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-09-17 14:48:20 UTC
+Last updated 2016-09-22 18:34:14 UTC
 </div>
 </div>
 </body>
